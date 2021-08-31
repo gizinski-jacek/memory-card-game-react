@@ -1,0 +1,25 @@
+:root {
+	font-size: 16px;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+}
+
+.cardsContainer {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	justify-content: space-evenly;
+	margin: 1rem;
+}
+
+.card {
+	margin: 2rem;
+	border: 1px solid black;
+}
+
+img {
+	height: 150px;
+	width: 100px;
+}
