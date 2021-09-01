@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import cards from './Utils/driversCards';
+import driversCards from './Utils/driversCards';
 import CardWrapper from './Utils/CardWrapper';
 
 function App() {
-	const [cardsState, setCardsState] = useState(shuffleArray(cards));
+	const [cardsState, setCardsState] = useState(shuffleArray(driversCards));
 	const [currentScore, setCurrentScore] = useState(0);
 	const [personalBest, setPersonalBest] = useState(0);
 
 	function resetGame() {
 		setPersonalBest(currentScore);
 		setCurrentScore(0);
-		setCardsState(shuffleArray(cards));
+		setCardsState(shuffleArray(driversCards));
 	}
 
 	function clickedCard(e) {
