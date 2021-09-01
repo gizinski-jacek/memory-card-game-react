@@ -56,9 +56,9 @@ function App() {
 	return (
 		<div>
 			<div className='scoreDisplay'>
-				<div>Current Score: {currentScore}</div>
-				<div>Personal Best: {personalBest}</div>
-				<div>Max Possible Score: {cardsDisplay.length}</div>
+				<h3>Current Score: {currentScore}</h3>
+				<h3>Personal Best: {personalBest}</h3>
+				<h3>Max Possible Score: {cardsDisplay.length}</h3>
 			</div>
 			<div className='cardsContainer'>{cardsDisplay}</div>
 		</div>
