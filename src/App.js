@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import cards from './Utils/cards';
+import cards from './Utils/driversCards';
+import CardWrapper from './Utils/CardWrapper';
 
 function App() {
 	const [cardsState, setCardsState] = useState(shuffleArray(cards));
@@ -48,22 +49,17 @@ function App() {
 
 	const cardsDisplay = cardsState.map((item) => {
 		return (
-			<div
-				key={item.id}
-				id={item.id}
-				className='card'
-				onClick={clickedCard}
-			>
-				<img src='' alt='' />
-				<p>{item.id}</p>
-			</div>
+			<CardWrapper key={item.id} data={item} handleClick={clickedCard} />
 		);
 	});
 
 	return (
 		<div>
-			<div>Personal Best: {personalBest}</div>
-			<div>Current Score: {currentScore}</div>
+			<div className='scoreDisplay'>
+				<div>Current Score: {currentScore}</div>
+				<div>Personal Best: {personalBest}</div>
+				<div>Max Possible Score: {cardsDisplay.length}</div>
+			</div>
 			<div className='cardsContainer'>{cardsDisplay}</div>
 		</div>
 	);
