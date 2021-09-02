@@ -2,4 +2,4 @@
 
 Card game made with React for testing your memory.
 
-###### This project is under active construction. Changes are to be expected.
+###### This project is mainly finished. Could maybe use bit more styling.
