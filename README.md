@@ -14,9 +14,9 @@ Card game made with React for testing your memory.
 
 # Github & Live
 
-Github repo can be found [here](https://github.com/gizinski-jacek/memory-card-game-react)
+Github repo can be found [here](https://github.com/gizinski-jacek/memory-card-game-react).
 
-This repo is live on [Heroku](https://memory-card-game-105295.herokuapp.com)
+This repo is live on [Heroku](https://memory-card-game-105295.herokuapp.com).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
