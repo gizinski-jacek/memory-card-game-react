@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import driversCards from './Utils/driversCards';
 import CardWrapper from './Utils/CardWrapper';
+import Footer from './Footer';
 
 function App() {
 	const [cardsState, setCardsState] = useState(shuffleArray(driversCards));
@@ -48,19 +49,18 @@ function App() {
 	}, [cardsState]);
 
 	const cardsDisplay = cardsState.map((item) => {
-		return (
-			<CardWrapper key={item.id} data={item} handleClick={clickedCard} />
-		);
+		return <CardWrapper key={item.id} data={item} handleClick={clickedCard} />;
 	});
 
 	return (
-		<div>
+		<div className='main'>
 			<div className='scoreDisplay'>
 				<h3>Current Score: {currentScore}</h3>
 				<h3>Personal Best: {personalBest}</h3>
 				<h3>Max Possible Score: {cardsDisplay.length}</h3>
 			</div>
 			<div className='cardsContainer'>{cardsDisplay}</div>
+			<Footer />
 		</div>
 	);
 }
